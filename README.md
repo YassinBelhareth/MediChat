@@ -92,11 +92,7 @@ This project includes a `Dockerfile` to containerize the application for easy de
 
 ## Example Interaction
 
-![MediChat Interface Example](assets/medichat_example.png)
-
-**User**: *Quel est le traitement pour le diabète ?*
-
-**MediChat**: *The treatment for diabetes depends on the type. For Type 1, insulin therapy is required. For Type 2, lifestyle changes and medications like metformin are often prescribed.*
+![MediChat Interface Example](medical_project_interface_2.png)
 
 ---
 
