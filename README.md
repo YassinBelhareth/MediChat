@@ -1,6 +1,6 @@
 # MediChat: AI-Powered Medical Consultation Assistant
 
-MediChat is an intelligent assistant designed to provide medical consultations using advanced natural language processing models. This project leverages a fine-tuned version of the LLaMA model to deliver accurate and context-aware responses in a conversational format.
+MediChat is an intelligent assistant designed to provide medical consultations using advanced natural language processing models. This project leverages a fine-tuned version of the original LLaMA-3.1-8B model, trained on medical conversation datasets. Specifically, the model benefits from training data sourced from [ChatDoctor-HealthCareMagic-100k](https://huggingface.co/datasets/lavita/ChatDoctor-HealthCareMagic-100k), enabling it to deliver accurate and context-aware responses in a conversational format.
 
 ---
 
@@ -13,10 +13,6 @@ MediChat is an intelligent assistant designed to provide medical consultations u
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Example Interaction](#example-interaction)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
 ---
 
 ## Features
@@ -92,24 +88,18 @@ This project includes a `Dockerfile` to containerize the application for easy de
 
 ## Example Interaction
 
-![MediChat Interface Example](medical_project_interface_2.png)
+![MediChat Interface Example](assets/medichat_example.png)
+
+
+### Note on Greetings
+
+The model always begins responses with a greeting such as "hi, ..." due to the training data sourced from [ChatDoctor-HealthCareMagic-100k](https://huggingface.co/datasets/lavita/ChatDoctor-HealthCareMagic-100k), which often included greetings in conversational examples. 
+
+#### Proposed Solution
+
+To address this, we recommend the following approach:
+1. **Explicitly Handle Greetings**: Modify the application to provide an initial greeting at the start of the session rather than relying on the model.
+2. **Retraining the Model**: Redo the fine-tuning process by explicitly removing greetings from the training dataset. This ensures that the model generates responses focused solely on the medical context without starting with greetings.
 
 ---
 
-## Contributing
-
-Contributions are welcome! Feel free to fork this repository and submit a pull request. For major changes, open an issue first to discuss your ideas.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-## Acknowledgements
-
-- **Hugging Face**: For providing easy access to pre-trained models.
-- **Streamlit**: For building a user-friendly web application interface.
-- **Meta AI**: For the LLaMA model architecture.
