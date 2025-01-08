@@ -88,7 +88,7 @@ This project includes a `Dockerfile` to containerize the application for easy de
 
 ## Example Interaction
 
-![MediChat Interface Example](assets/medichat_example.png)
+![MediChat Interface Example](medical_project_interface_2.png)
 
 
 ### Note on Greetings
