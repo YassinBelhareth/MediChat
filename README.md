@@ -17,11 +17,8 @@ MediChat is an intelligent assistant designed to provide medical consultations u
 
 ## Features
 
-- **Multilingual Support**: Understands French input and responds contextually (responses default to English).
 - **Medical Context**: Fine-tuned on medical data for specialized knowledge.
 - **Contextual Memory**: Tracks conversation history for meaningful interactions.
-- **Customizable Prompts**: Easily adaptable for other domains.
-
 ---
 
 ## Setup
